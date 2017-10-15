@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+
+    Mysiar\FileBundle\Serializer\Encoder\MultipartEncoder:
+        class: Mysiar\FileBundle\Serializer\Encoder\MultipartEncoder
+        tags: ['serializer.encoder']
+
+    Mysiar\FileBundle\Action\ReadItem:
+        class: Mysiar\FileBundle\Action\ReadItem

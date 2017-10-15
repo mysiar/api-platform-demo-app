@@ -1,0 +1,45 @@
+Mysiar\FileBundle\Entity\Document:
+    attributes:
+        filters: ['default.search', 'default.date', 'default.boolean', 'default.range_id', 'default.order']
+        id:
+            groups: ['document-out']
+        documentFile:
+            groups: ['document-in']
+
+    collectionOperations:
+        get:
+            method: 'GET'
+        post:
+            method: 'POST'
+            route_name: 'Mysiar\FileBundle\Action\Create'
+            normalization_context:
+                groups: ['document-out']
+            denormalization_context:
+                groups: ['document-in']
+            swagger_context:
+                parameters:
+                         - { name: file, in: formData, description: "file to upload", required: true, type: file }
+                         - { name: description, in: formData, required: false, type: string }
+                consumes: ['multipart/form-data']
+    itemOperations:
+        get:
+            method: 'GET'
+            route_name: 'Mysiar\FileBundle\Action\ReadItem'
+            denormalization_context:
+                groups: ['document-in']
+        post_update:
+            method: 'POST'
+            route_name: 'Mysiar\FileBundle\Action\Update'
+            normalization_context:
+                groups: ['document-out']
+            denormalization_context:
+                groups: ['document-in']
+            swagger_context:
+                parameters:
+                         - { name: id, in: path, required: true, type: string }
+                         - { name: file, in: formData, description: "file to upload", required: true, type: file }
+                         - { name: description, in: formData, required: false, type: string }
+                consumes: ['multipart/form-data']
+                summary: 'Replaces the Document resource'
+        delete:
+            method: 'DELETE'

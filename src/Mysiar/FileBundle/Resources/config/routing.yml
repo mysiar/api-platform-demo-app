@@ -1,0 +1,29 @@
+Mysiar\FileBundle\Action\Create:
+    path: /documents
+    methods: POST
+    defaults:
+      _controller: 'Mysiar\FileBundle\Action\Create'
+      _api_receive: true # request deserialization
+      _api_respond: true  # persist & serialize returned entity from the action
+      _api_resource_class: 'Mysiar\FileBundle\Entity\Document'
+      _api_collection_operation_name: post
+
+Mysiar\FileBundle\Action\ReadItem:
+    path: /documents/{id}
+    methods: GET
+    defaults:
+      _controller: 'Mysiar\FileBundle\Action\ReadItem'
+      _api_receive: true # request deserialization
+      _api_respond: true  # persist & serialize returned entity from the action
+      _api_resource_class: 'Mysiar\FileBundle\Entity\Document'
+      _api_item_operation_name: get
+
+Mysiar\FileBundle\Action\Update:
+    path: /documents/{id}
+    methods: POST
+    defaults:
+      _controller: 'Mysiar\FileBundle\Action\Update'
+      _api_receive: true # request deserialization
+      _api_respond: true  # persist & serialize returned entity from the action
+      _api_resource_class: 'Mysiar\FileBundle\Entity\Document'
+      _api_item_operation_name: post_update
