@@ -1,4 +1,5 @@
-# FileBundle
+FileBundle
+======
 
 Uploading & managing files through API-Platform
 

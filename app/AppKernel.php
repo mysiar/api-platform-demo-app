@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle(),
             // Mysiar bundles
             new Mysiar\FileBundle\FileBundle(),
+            new Mysiar\LxdBundle\LxdBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

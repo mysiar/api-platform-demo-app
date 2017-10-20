@@ -16,6 +16,11 @@ parameters:
     mailer_password:   ~
 
     # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            a283b4833e187026243408f1e6d519b696f10c9e
 
     cors_allow_origin: '*'
+
+    lxd1:
+        url: 'https://your_lxd_server:your_lxd_server_port'
+        cert: '%kernel.root_dir%/config/lxd1.crt'
+        key: '%kernel.root_dir%/config/lxd1.key'
