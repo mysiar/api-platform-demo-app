@@ -1,8 +1,3 @@
-lxd:
-    resource: "@LxdBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 api:
     resource: '.'
     type:     'api_platform'
