@@ -5,4 +5,4 @@ services:
     lxd1:
         class: Mysiar\LxdBundleBundle\Config
         factory: ['Mysiar\LxdBundle\ConfigFactory', createConfig]
-        arguments: ['@service_container']
+        arguments: [%lxd1%]

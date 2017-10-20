@@ -9,16 +9,18 @@ declare(strict_types=1);
 
 namespace Mysiar\LxdBundle;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
-
 class ConfigFactory
 {
-    public static function createConfig(ContainerInterface $container): Config
+    /**
+     * @param string[] $params
+     * @return Config
+     */
+    public static function createConfig(array $params): Config
     {
         $config = new Config();
-        $config->setUrl($container->getParameter('lxd1')['url']);
-        $config->setCert($container->getParameter('lxd1')['cert']);
-        $config->setKey($container->getParameter('lxd1')['key']);
+        $config->setUrl($params['url']);
+        $config->setCert($params['cert']);
+        $config->setKey($params['key']);
 
         return $config;
     }
