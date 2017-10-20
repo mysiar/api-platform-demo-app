@@ -1,4 +1,8 @@
 services:
-#    lxd.example:
-#        class: Mysiar\LxdBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    _defaults:
+        autowire: true
+
+    lxd1:
+        class: Mysiar\LxdBundleBundle\Config
+        factory: ['Mysiar\LxdBundle\ConfigFactory', createConfig]
+        arguments: ['@service_container']
