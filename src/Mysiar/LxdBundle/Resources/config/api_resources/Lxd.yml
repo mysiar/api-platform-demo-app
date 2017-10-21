@@ -1,0 +1,12 @@
+#Mysiar\LxdBundle\Model\Lxd:
+#    collectionOperations:
+#        get:
+#            method: 'GET'
+#            route_name: 'Mysiar\LxdBundle\Action\Info'
+#    itemOperations: []
+#
+#
+#Mysiar\LxdBundle\Model\Info:
+#    properties:
+#        id:
+#          identifier: true

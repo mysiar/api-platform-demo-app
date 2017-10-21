@@ -12,5 +12,6 @@ namespace Mysiar\LxdBundle;
 
 interface LxdInterface
 {
+    public const LXD_API_VER = '1.0';
     public const LXD_COMMAND_CONTAINERS = 'containers';
 }

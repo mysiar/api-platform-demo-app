@@ -1,0 +1,13 @@
+Mysiar\LxdBundle\Model\Info\Info:
+    properties:
+        statusCode:
+            identifier: true
+    collectionOperations:
+        get:
+            method: 'GET'
+            route_name: 'Mysiar\LxdBundle\Action\Info'
+    itemOperations: []
+#    itemOperations:
+#        get:
+#            method: 'GET'
+#            route_name: 'Mysiar\LxdBundle\Action\EmptyGetItem'

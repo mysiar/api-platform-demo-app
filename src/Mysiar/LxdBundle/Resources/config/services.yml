@@ -2,7 +2,13 @@ services:
     _defaults:
         autowire: true
 
-    lxd1:
-        class: Mysiar\LxdBundleBundle\Config
+    Mysiar\LxdBundle\Config:
+        class: Mysiar\LxdBundle\Config
         factory: ['Mysiar\LxdBundle\ConfigFactory', createConfig]
-        arguments: [%lxd1%]
+        arguments: ['%lxd%']
+
+    Mysiar\LxdBundle\Client:
+        class: Mysiar\LxdBundle\Client
+
+    Mysiar\LxdBundle\Action\Info:
+        class: Mysiar\LxdBundle\Action\Info

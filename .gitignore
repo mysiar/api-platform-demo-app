@@ -14,6 +14,6 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/app/config/client.crt
-/app/config/client.key
+/app/config/lxd.crt
+/app/config/lxd.key
 /web/config.php

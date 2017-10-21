@@ -4,8 +4,8 @@ api:
 
 file_bundle:
     resource: "@FileBundle/Resources/config/routing.yml"
-    prefix:   '/api'
+    prefix:   '/'
 
 lxd_bundle:
     resource: "@LxdBundle/Resources/config/routing.yml"
-    prefix:   '/api/lxd'
+    prefix:   '/lxd'

@@ -1,0 +1,19 @@
+Mysiar\LxdBundle\Action\Info:
+    path: /info
+    methods: GET
+    defaults:
+        _controller: 'Mysiar\LxdBundle\Action\Info'
+        _api_receive: true # request deserialization
+        _api_respond: true  # persist & serialize returned entity from the action
+        _api_resource_class: 'Mysiar\LxdBundle\Model\Info\Info'
+        _api_collection_operation_name: get
+
+Mysiar\LxdBundle\Action\EmptyGetItem:
+    path: /info/{id}
+    methods: GET
+    defaults:
+        _controller: 'Mysiar\LxdBundle\Action\EmptyGetItem'
+        _api_receive: true # request deserialization
+        _api_respond: true  # persist & serialize returned entity from the action
+        _api_resource_class: 'Mysiar\LxdBundle\Model\Info\Info'
+        _api_item_operation_name: get

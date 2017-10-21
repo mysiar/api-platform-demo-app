@@ -28,7 +28,10 @@ class ConfigFactoryTest extends TestCase
 
     public function testConfig(): void
     {
-        $config = $this->container->get('lxd1');
+        /** @var Config $config */
+        $config = $this->container->get(Config::class);
         $this->assertInstanceOf(Config::class, $config);
+        $this->assertFileExists($config->getCert());
+        $this->assertFileExists($config->getKey());
     }
 }
