@@ -12,6 +12,7 @@ namespace Mysiar\LxdBundle\Tests;
 require_once(__DIR__ . "/../../../../app/AppKernel.php");
 
 use Mysiar\LxdBundle\Client;
+use Mysiar\LxdBundle\Model\Containers\Containers;
 use Mysiar\LxdBundle\Model\Info\Info;
 use PHPUnit\Framework\TestCase;
 
@@ -40,15 +41,17 @@ class ClientTest extends TestCase
 
     public function testGetInfo(): void
     {
+        /** @var Info $data */
         $data = $this->client->getInfo();
         $this->assertInstanceOf(Info::class, $data);
+        $this->assertEquals(200, $data->getStatusCode());
     }
 
-//    public function testGetContainers(): void
-//    {
-//        $json = $this->client->getContainers();
-//        $array = json_decode($json, true);
-//
-//        $this->assertEquals(200, $array['status_code']);
-//    }
+    public function testGetContainers(): void
+    {
+        /** @var Containers $data */
+        $data = $this->client->getContainers();
+        $this->assertInstanceOf(Containers::class, $data);
+        $this->assertEquals(200, $data->getStatusCode());
+    }
 }

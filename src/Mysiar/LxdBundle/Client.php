@@ -15,6 +15,7 @@ use Http\Discovery\MessageFactoryDiscovery;
 use Http\Discovery\StreamFactoryDiscovery;
 use JMS\Serializer\SerializerInterface;
 use JMS\Serializer\SerializerBuilder;
+use Mysiar\LxdBundle\Model\Containers\Containers;
 use Mysiar\LxdBundle\Model\Info\Info;
 use Psr\Http\Message\RequestInterface;
 
@@ -90,12 +91,18 @@ class Client
         return $this->deserialize($response, Info::class);
     }
 
-//    public function getContainers(): string
-//    {
-//        $request = $this->createRequest('GET', LxdInterface::LXD_COMMAND_CONTAINERS);
-//
-//        return $this->getJsonResponse($request);
-//    }
+    public function getContainers(): LxdInterface
+    {
+        $request = $this->createRequest('GET', LxdInterface::LXD_COMMAND_CONTAINERS);
+
+        $response =  $this->getJsonResponse($request);
+        $array = json_decode($response, true);
+
+        $object = $this->deserialize($response, Containers::class);
+        $array['metadata'] ? $object->setMetadata($array['metadata']) : null;
+
+        return $object;
+    }
 
 
     /*

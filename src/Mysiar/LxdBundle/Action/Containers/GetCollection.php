@@ -4,17 +4,16 @@ declare(strict_types=1);
 /**
  * (c) Piotr Synowiec <psynowiec@gmail.com>
  *
- * 21/10/2017 09:05
+ * 21/10/2017 11:51
  */
 
-namespace Mysiar\LxdBundle\Action;
+namespace Mysiar\LxdBundle\Action\Containers;
 
 use Mysiar\LxdBundle\Client;
 use Mysiar\LxdBundle\LxdInterface;
 
-class Info
+class GetCollection
 {
-
     /** @var  Client */
     private $client;
 
@@ -25,6 +24,6 @@ class Info
 
     public function __invoke(): LxdInterface
     {
-        return $this->client->getInfo();
+        return $this->client->getContainers();
     }
 }

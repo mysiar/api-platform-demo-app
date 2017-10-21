@@ -12,3 +12,6 @@ services:
 
     Mysiar\LxdBundle\Action\Info:
         class: Mysiar\LxdBundle\Action\Info
+
+    Mysiar\LxdBundle\Action\Containers\GetCollection:
+        class: Mysiar\LxdBundle\Action\Containers\GetCollection
