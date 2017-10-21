@@ -20,7 +20,7 @@ parameters:
 
     cors_allow_origin: '*'
 
-    lxd1:
+    lxd:
         url: 'https://your_lxd_server:your_lxd_server_port'
-        cert: '%kernel.root_dir%/config/lxd1.crt'
-        key: '%kernel.root_dir%/config/lxd1.key'
+        cert: '%kernel.root_dir%/config/lxd.crt'
+        key: '%kernel.root_dir%/config/lxd.key'

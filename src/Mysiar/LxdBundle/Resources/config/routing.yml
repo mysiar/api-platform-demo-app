@@ -1,0 +1,41 @@
+Mysiar\LxdBundle\Action\Info:
+    path: /info
+    methods: GET
+    defaults:
+        _controller: 'Mysiar\LxdBundle\Action\Info'
+        _api_receive: true # request deserialization
+        _api_respond: true  # persist & serialize returned entity from the action
+        _api_resource_class: 'Mysiar\LxdBundle\Model\Info\Info'
+        _api_collection_operation_name: get
+
+Mysiar\LxdBundle\Action\Containers\GetCollection:
+    path: /containers
+    methods: GET
+    defaults:
+        _controller: 'Mysiar\LxdBundle\Action\Containers\GetCollection'
+        _api_receive: true # request deserialization
+        _api_respond: true  # persist & serialize returned entity from the action
+        _api_resource_class: 'Mysiar\LxdBundle\Model\Containers\Containers'
+        _api_collection_operation_name: get
+
+
+# Dummy routes to avoid error: "No item route associated with the type ... "
+info_empty_get_item:
+    path: /info/{id}
+    methods: GET
+    defaults:
+        _controller: 'Mysiar\LxdBundle\Action\EmptyGetItem'
+        _api_receive: true # request deserialization
+        _api_respond: true  # persist & serialize returned entity from the action
+        _api_resource_class: 'Mysiar\LxdBundle\Model\Info\Info'
+        _api_item_operation_name: get
+
+containers_empty_get_item:
+    path: /containers/{id}
+    methods: GET
+    defaults:
+        _controller: 'Mysiar\LxdBundle\Action\EmptyGetItem'
+        _api_receive: true # request deserialization
+        _api_respond: true  # persist & serialize returned entity from the action
+        _api_resource_class: 'Mysiar\LxdBundle\Model\Containers\Containers'
+        _api_item_operation_name: get
