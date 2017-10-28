@@ -98,6 +98,10 @@ api_platform:
         csv:     ['text/csv']
         html:    ['text/html']
         multipart: ['multipart/form-data']
+    graphql:
+        enabled: true
+        graphiql:
+            enabled: true
 
 vich_uploader:
     db_driver: orm
@@ -106,3 +110,7 @@ vich_uploader:
             upload_destination: '%kernel.root_dir%/../var/files'
             namer:              vich_uploader.namer_origname
             directory_namer:    vich_uploader.directory_namer_subdir
+
+#graphql:
+#    enabled: true
+#    graphiql: false

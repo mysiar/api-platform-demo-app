@@ -6,3 +6,19 @@ Mysiar's API-Platform demo
 
 1. [FileBundle](src/Mysiar/FileBundle) - uploading files
 2. [LxdBundle](src/Mysiar/LxdBundle) - managing LXD server
+3. Enabled GraphQL
+    * instalation
+        ```bash
+        $ composer require webonyx/graphql-php
+        ```
+    * configuration
+        ```yaml
+        api_platform:
+          graphql:
+              enabled: true
+              graphiql:
+                  enabled: true
+        ```
+    * result
+
+        ![graphql](graphql.png)

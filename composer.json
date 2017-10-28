@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.0",
         "symfony/symfony": "3.3.*",
-        "api-platform/core": "^2.1",
+        "api-platform/core": "dev-master",
         "doctrine/orm": "^2.5",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
@@ -37,7 +37,8 @@
         "php-http/curl-client": "^1.7",
         "guzzlehttp/psr7": "^1.4",
         "php-http/message": "^1.6",
-        "jms/serializer": "^1.9"
+        "jms/serializer": "^1.9",
+        "webonyx/graphql-php": "^0.11.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
